@@ -1,31 +1,36 @@
 # Cyber Security Scanner
 
-## Description
+Outil Python d'analyse de sécurité d'une cible autorisée.
 
-Cyber Security Scanner est un outil Python développé dans un environnement Linux WSL.
+## Fonctionnalités
 
-Il permet d'analyser une cible autorisée afin de :
+- Résolution DNS de la cible
+- Scan TCP des ports 8000 à 8020
+- Détection des services HTTP
+- Récupération des en-têtes HTTP
+- Vérification de headers de sécurité
+- Évaluation simple du niveau de risque
+- Génération d'un rapport `scan_report.txt`
 
-- résoudre son adresse IP ;
-- scanner une plage de ports TCP ;
-- détecter les services HTTP ;
-- récupérer les en-têtes HTTP ;
-- vérifier certains headers de sécurité ;
-- évaluer un niveau de risque selon des règles simples ;
-- générer un rapport de scan.
-
-## Technologies utilisées
+## Technologies
 
 - Python
-- Linux / WSL
 - TCP/IP
 - HTTP
+- Linux / WSL
 - Git
-- Nmap
-- Wireshark
 
 ## Utilisation
 
 ```bash
 python3 scanner.py 127.0.0.1
 ```
+Le scanner doit être utilisé uniquement sur des systèmes que vous êtes autorisé à analyser.
+
+## Rapport
+
+Après le scan, un fichier `scan_report.txt` est généré avec les résultats.
+
+## État
+
+Projet finalisé — version 1.0.
