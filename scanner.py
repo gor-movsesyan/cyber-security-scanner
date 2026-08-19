@@ -19,7 +19,7 @@ def check_http(port):
         if response.startswith(b"HTTP/"):
             return True
 
-    except:
+    except (socket.timeout, OSError):
         pass
 
     return False
@@ -39,7 +39,7 @@ def get_http_headers(port):
 
         return response.decode(errors="ignore")
 
-    except:
+    except (socket.timeout, OSError):
         return ""
 
 
